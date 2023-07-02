@@ -11,11 +11,12 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
+  skip_provider_registration = "true"
   features {}
 }
 
 # Create Resource Group 
 resource "azurerm_resource_group" "elbe_demo_rg1" {
-  location = "eastusaustraliasoutheast"
+  location = "australiasoutheast"
   name = "elbe-demo-rg1"  
 }
